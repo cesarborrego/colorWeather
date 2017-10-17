@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cesar.colorweather.MainActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/iconImageViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/clear_day"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="41dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <TextView
+        android:id="@+id/descriptionTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:text="Partly Cloudy"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toLeftOf="@+id/iconImageViewId"
+        app:layout_constraintRight_toRightOf="@+id/iconImageViewId"
+        app:layout_constraintTop_toBottomOf="@+id/iconImageViewId" />
+
+    <TextView
+        android:id="@+id/currentTempTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="19"
+        android:textColor="@android:color/white"
+        android:textSize="59sp"
+        app:layout_constraintLeft_toLeftOf="@+id/descriptionTextViewId"
+        app:layout_constraintRight_toRightOf="@+id/descriptionTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextViewId" />
+
+    <ImageView
+        android:id="@+id/degreeImageViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/degree"
+        app:layout_constraintTop_toTopOf="@+id/currentTempTextViewId"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/currentTempTextViewId"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/highestTempId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="24dp"
+        style="@style/mainFont"
+        android:text="H:19º"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentTempTextViewId" />
+
+    <TextView
+        android:id="@+id/lowestTempId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="24dp"
+        android:text="L:12º"
+        style="@style/mainFont"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentTempTextViewId" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <TextView
+        android:id="@+id/dailyId"
+        style="@style/mainFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/daily"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/hourlyId"
+        style="@style/mainFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/hourly"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/minutelyId"
+        style="@style/mainFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/minutely"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

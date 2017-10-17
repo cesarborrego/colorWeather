@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ColorWeather</string>
+    <string name="daily_forecast">Daily Forecast</string>
+    <string name="hourly_forcast">Hourly Forcast</string>
+    <string name="minutely_forecast">Minutely Forecast</string>
+    <string name="daily">Daily</string>
+    <string name="hourly">Hourly</string>
+    <string name="minutely">Minutely</string>
+</resources>
